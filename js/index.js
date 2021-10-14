@@ -1,5 +1,3 @@
-// let map;
-
 
 // 現在地取得処理
 function initMap() {
