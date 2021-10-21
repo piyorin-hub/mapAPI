@@ -7,6 +7,7 @@
 //     });
 // }
 
+<<<<<<< HEAD
 var map;
 var marker = [];
 var infoWindow = [];
@@ -23,6 +24,8 @@ var markerData =[
     }
 ]
 
+=======
+>>>>>>> 1308379721d5e8c5927d81d903ab282669fbce66
 // 現在地取得処理
 function initMap() {
     // Geolocation APIに対応している
@@ -32,6 +35,7 @@ function initMap() {
             // 取得成功した場合
             function (position) {
                 // 緯度・経度を変数に格納
+<<<<<<< HEAD
                 // var mapLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
                 var mapLatLng = new google.maps.LatLng(43.068661, 141.350755)　 //札幌駅の座標（動画用)
                 // マップオプションを変数に格納
@@ -42,10 +46,21 @@ function initMap() {
                 };
                 // マップオブジェクト作成
                 map = new google.maps.Map(
+=======
+                var mapLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                // マップオプションを変数に格納
+                var mapOptions = {
+                    zoom: 15,          // 拡大倍率
+                    center: mapLatLng  // 緯度・経度
+                };
+                // マップオブジェクト作成
+                var map = new google.maps.Map(
+>>>>>>> 1308379721d5e8c5927d81d903ab282669fbce66
                     document.getElementById("map"), // マップを表示する要素
                     mapOptions         // マップオプション
                 );
                 //　マップにマーカーを表示する
+<<<<<<< HEAD
                 var currentmarker = new google.maps.Marker({
                     map: map,             // 対象の地図オブジェクト
                     position: mapLatLng   // 緯度・経度
@@ -63,6 +78,12 @@ function initMap() {
                         content: '<div class="sample">' + markerData[i]['name'] + '</div>' // 吹き出しに表示する内容
                     });
                 }
+=======
+                var marker = new google.maps.Marker({
+                    map: map,             // 対象の地図オブジェクト
+                    position: mapLatLng   // 緯度・経度
+                });
+>>>>>>> 1308379721d5e8c5927d81d903ab282669fbce66
             },
             // 取得失敗した場合
             function (error) {
@@ -87,5 +108,10 @@ function initMap() {
     } else {
         alert("この端末では位置情報が取得できません");
     }
+<<<<<<< HEAD
     
 }
+=======
+}
+
+>>>>>>> 1308379721d5e8c5927d81d903ab282669fbce66
